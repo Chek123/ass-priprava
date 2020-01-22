@@ -45,7 +45,7 @@
 43. Authorization
 44. Observer
 45. Mediator + class diagram
-46. Command
+46. Command + class diagram
 47. Memento
 48. Context Object
 49. Data Transfer Object
