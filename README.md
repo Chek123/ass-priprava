@@ -135,12 +135,12 @@
 - filtre sú aktívne, t.j. ťahajú,spracúvajú a tlačia údaje, synchronizácia dátovodom medzi nimi (vyrovnávacia pamäť)
 
 ### implementacia
-- rozdeľ úlohu systému do postupnosti spracovateľských krokov
-- definuj formát údajov pre každý dátovod
-- rozhodni o spôsobe implementácie každého spojenia
-- navrhni a implementuj filtre
-- navrhni spôsob ošetrenia chýb
-- zostav spracovateľský reťazec
+1. rozdeľ úlohu systému do postupnosti spracovateľských krokov
+2. definuj formát údajov pre každý dátovod
+3. rozhodni o spôsobe implementácie každého spojenia
+4. navrhni a implementuj filtre
+5. navrhni spôsob ošetrenia chýb
+6. zostav spracovateľský reťazec
 
 ### pros & cons
 - pomocné súbory netreba, hoci môžu byť
@@ -160,14 +160,14 @@
 - komunikácia dvoch vrstvených systémov
 
 ### implementácia
-- definuj kritérium abstrakcie
-- urči počet úrovní abstrakcie
-- pomenuj úrovne, priraď úlohy
-- zjemni členenie úrovní
-- stanov rozhrania úrovní
-- štrukturuj jednotlivé úrovne
-- urči spôsob komunikácie medzi jednotlivými úrovňami
-- navrhni spôsob ošetrenia chýb
+1. definuj kritérium abstrakcie
+2. urči počet úrovní abstrakcie
+3. pomenuj úrovne, priraď úlohy
+4. zjemni členenie úrovní
+5. stanov rozhrania úrovní
+6. štrukturuj jednotlivé úrovne
+7. urči spôsob komunikácie medzi jednotlivými úrovňami
+8. navrhni spôsob ošetrenia chýb
 
 ### pros & cons
 - znovupoužitie vrstiev (+)
@@ -190,13 +190,13 @@
 
 ## Black Board
 ### implementacia
-- definuj problém
-- definuj priestor riešenia
-- rozdeľ proces riešenia na kroky
-- navrhni špecializované podúlohy
-- navrhni štruktúru tabule
-- špecifikuj spôsob riadenia systému
-- implementuj špecializované programové podsystémy
+1. definuj problém
+2. definuj priestor riešenia
+3. rozdeľ proces riešenia na kroky
+4. navrhni špecializované podúlohy
+5. navrhni štruktúru tabule
+6. špecifikuj spôsob riadenia systému
+7. implementuj špecializované programové podsystémy
 
 ### pros & cons
 - Experimentovanie
