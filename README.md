@@ -70,3 +70,156 @@
 68. Row Data Gateway
 69. Table Data Gateway
 70. Active Record
+
+# Štýly
+
+## Pipes and Filters
+- scenare
+- implementácia
+- pros & cons
+
+## Layers
+- scenare
+- implementacia
+- pros & cons
+
+## Klient-server
+- pros & cons
+
+## Black Board
+- implementacia
+- pros & cons
+
+## Štýly riadenia
+- rozdelenie
+- definicie
+- obrazok
+
+
+# .
+# .
+# .
+# .
+# .
+# .
+# .
+# .
+# .
+# .
+# .
+# .
+# .
+# .
+# .
+# .
+# .
+# .
+# .
+# .
+# .
+# .
+# .
+# .
+# .
+# .
+# .
+# .
+# .
+# .
+# Odpovede
+## Pipes and Filters
+### scenare
+- zdroj údajov tlačí údaje, filtre sú pasívne
+- spotrebič údajov ťahá údaje, filtre sú pasívne
+- kombinácia tlačenia a ťahania
+- filtre sú aktívne, t.j. ťahajú,spracúvajú a tlačia údaje, synchronizácia dátovodom medzi nimi (vyrovnávacia pamäť)
+
+### implementacia
+- rozdeľ úlohu systému do postupnosti spracovateľských krokov
+- definuj formát údajov pre každý dátovod
+- rozhodni o spôsobe implementácie každého spojenia
+- navrhni a implementuj filtre
+- navrhni spôsob ošetrenia chýb
+- zostav spracovateľský reťazec
+
+### pros & cons
+- pomocné súbory netreba, hoci môžu byť
+- pružnosť výmenou filtrov
+- pružnosť rekombináciou
+- znovupoužitie filtrov
+- rýchle prototypovanie spracovateľských reťazcov
+- efektívnosť paralelného spracovania
+
+## Layers
+
+### scenare
+- komunikácia zhora nadol
+- komunikácia zdola nahor
+- komunikácia zhora čiastočne nadol
+- komunikácia zdola čiastočne nahor
+- komunikácia dvoch vrstvených systémov
+
+### implementácia
+- definuj kritérium abstrakcie
+- urči počet úrovní abstrakcie
+- pomenuj úrovne, priraď úlohy
+- zjemni členenie úrovní
+- stanov rozhrania úrovní
+- štrukturuj jednotlivé úrovne
+- urči spôsob komunikácie medzi jednotlivými úrovňami
+- navrhni spôsob ošetrenia chýb
+
+### pros & cons
+- znovupoužitie vrstiev (+)
+- podporuje normalizáciu (+)
+- lokalizácia závislostí (+)
+- zameniteľnosť (+)
+- reťazenie zmien (-)
+- nižšia efektívnosť (-)
+- nadbytočná práca (-)
+- ťažkosť pri stanovovaní vrstiev (-)
+
+## Klient-server
+### pros & cons
+- Distribúcia dát je priamočiara (+)
+- Robí využívanie sieťových systémov efektívnym. Môže vyžadovať lacnejší hardvér(+)
+- Jednoduché pridať nové servery alebo ich vynoviť (upgrade) (+)
+- Neposkytuje model pre spoločné požívanie dát, čiže podsystémy používajú rozličné spôsoby organizovania dát. Vzájomná výmena dát môže byť neefektívna.(-)
+- Nadbytočné manažovanie v každom serveri (-)
+- Nejestvuje centrálny register mien a služieb – môže byť ťažké zistiť aké servery a služby sú dostupné (-)
+
+## Black Board
+### implementacia
+- definuj problém
+- definuj priestor riešenia
+- rozdeľ proces riešenia na kroky
+- navrhni špecializované podúlohy
+- navrhni štruktúru tabule
+- špecifikuj spôsob riadenia systému
+- implementuj špecializované programové podsystémy
+
+### pros & cons
+- Experimentovanie
+- podpora zmien a udržovateľnosti
+- znovupoužiteľné podsystémy
+- odolnosť voči poruchám a robustnosť
+- ťažké testovanie
+- nezaručuje sa dobré riešenie
+- ťažko sa stanoví riadiaca stratégia
+- nízka efektívnosť
+- vysoké nároky na vývoj
+- nebráni, ale ani nepodporuje paralené vykonanie
+
+## Štýly riadenia
+### rozdelenie
+- Centralizované riadenie (Model volanie-návrat, Model s manažérom)
+- Riadenie založené na udalostiach (BroadCast, Interrupt-driven)
+
+### definicie
+- **Model volanie-návrat** (model podprogramov „zhora nadol“ kde riadenie začína na vrchu hierarchie podprogramov a pohybuje sa volaním akoby smerom dole, návratmi sa neskôr vracia späť nahor. Dá sa použiť na sekvenčné systémy)
+- **Model s manažérom** (Dá sa použiť na súbežné systémy. Jeden systémový komponent ovláda zastavovanie, štartovanie a koordináciu ostatných systémových procesov. V sekvenčných systémoch sa dá implementovať pomocou príkazu case. )
+- **BroadCast** ( Udalosť (informácia o nej) sa vysiela všetkým podsystémom. Ktorýkoľvek podsystém, ktorý dokáže vybaviť/ošetriť udalosť, tak môže učiniť.)
+- **Interrupt-driven** ( Používa sa v systémoch reálneho času, kde sa prerušenia rozpoznajú správcom prerušení (interrupt handler) a odovzdajú sa určenému komponentu na spracovanie)
+
+### obrazok
+to sa mi uz nechce
